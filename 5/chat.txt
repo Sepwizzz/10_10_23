@@ -1,0 +1,2 @@
+chat gpt
+5.Explique el concepto de decoradores en python. Escriba dos ejemplos con el código comentariado con la explicación

@@ -1,1 +1,4 @@
 thomas
+
+4.Explique el uso de argumentos de tipo posicionales (args) y argumentos clave (*kwargs). Escriba dos ejemplos con el código comentariado con la explicación
+
