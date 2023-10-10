@@ -1,0 +1,53 @@
+funciones como ciudadanos de primera clase
+
+Funciones de primera clase en programación se refiere a la capacidad de un lenguaje de tratar las funciones como objetos de alto nivel, permitiendo que las funciones puedan ser:
+1.	Pasadas como argumentos: Se pueden pasar como argumentos a otras funciones.
+2.	Retornadas por funciones: Se pueden devolver como resultados de otras funciones.
+3.	Asignadas a variables: Se pueden asignar a variables, lo que permite su manipulación y reutilización de manera flexible.
+Esta característica proporciona flexibilidad y expresividad al lenguaje, permitiendo una programación más modular y funcional.
+
+
+
+ejemplo1:  Pasar funciones como argumentos
+
+# eje funcion, esta duplica numeros o items nu7mericos de una lista
+def duplicarN(x):
+    return x * 2 # X seria cada item o numeros de la lista
+
+# esta funcion tomaria la anterior y le aplicariamos como segundo argumento la lista de numeros
+def funcion2(funcion, lista):
+    resultados = []           #creamos esta liusta vacia para llenarla con los numeros de resultado
+    for elemento in lista:     #con este ciclo recorremos la lista y va a arrojar cada numero de manera individuial en la variable elemento
+        resultados.append(funcion(elemento))  # Aplicamos la función a cada elemento y guardamos el resultado
+    return resultados
+
+# lista de numeros o la podemos hacer por medio de un input 
+numeros = [1, 2, 3, 4, 5,69]
+
+# Aplicamos la función 'duplicarN' a la lista usando 'funcion2'
+resultado = funcion2(duplicarN, numeros)  # Pasamos 'duplicar' como función y 'numeros' como lista
+
+# resultado
+print(resultado)
+
+
+
+ejemplo2:  Retornar funciones desde funciones
+
+# Definimos una función que genera y devuelve una función de suma
+def smador(valorAsumar):
+    # Definimos una función interna llamada 'suma'
+    def suma(x):
+        return x + valorAsumar  # La función 'suma' suma 'valorAsumar' a 'x'
+    return suma  # Devolvemos la función 'suma'
+
+# Creamos una función 'sumarN' que suma 5 a su argumento
+sumarN = smador(5)  # Llamamos a 'smador' con 'valorAsumar' igual a 5
+
+# Llamamos a la función 'sumarN'
+resultado = sumarN(10)  # Pasamos 10 como argumento a 'sumarN'
+
+# Imprimimos el resultado
+print(resultado)
+
+
