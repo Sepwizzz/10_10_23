@@ -1,0 +1,9 @@
+Explique el uso de argumentos de tipo posicionales (*args) y argumentos clave (**kwargs). Escriba dos ejemplos con el código comentariado con la explicación
+
+
+*ARGS
+Los argumentos de tipo posicionales o "*args"(abreviatura de argumentos) permiten que una función acepte un número variable de argumentos posicionales. Esto significa que puedes pasar un número variable de argumentos no nombrados cuando llamas a la función.
+
+
+*KWARGS
+Loas argumentos clave o "**kwargs" (keyword arguments) ermiten que una función acepte un número variable de argumentos con nombre.
